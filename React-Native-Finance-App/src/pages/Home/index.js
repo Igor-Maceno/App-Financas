@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, FlatList } from "react-native";
 //components
 import Header from "../../components/Header";
 import Balance from "../../components/Balance";
+import Movements from "../../components/Movements";
 
 const list = [
   {
@@ -16,7 +17,7 @@ const list = [
     id: 2,
     label: "Banco Inter",
     value: "57,89",
-    date: "10/04/2024",
+    date: "08/04/2024",
     type: 0, //despesas,
   },
   {
@@ -39,7 +40,7 @@ export default function Home() {
         data={list}
         keyExtractor={(item) => String(item.id)}
         showsVerticalScrollIndicator={false}
-        renderItem={({item}) => <Text>TESTE</Text>}
+        renderItem={({item}) => <Movements data={item}/>}
       />
     </View>
   );
@@ -53,12 +54,10 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 16,
     fontWeight: "bold",
-    marginLeft: 16,
-    marginRight: 14,
-    marginTop: 14,
+    margin: 14,
   },
   list: {
     marginStart: 14,
-    marginTop: 14,
+    marginEnd: 14,
   },
 });
