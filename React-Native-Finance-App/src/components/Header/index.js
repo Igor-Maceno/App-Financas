@@ -14,7 +14,7 @@ const statusBarHeight = StatusBar.currentHeight
   ? StatusBar.currentHeight + 22
   : 64;
 
-export default function Header({name}) {
+export default function Header({ name }) {
   return (
     <View style={styles.container}>
       <View style={styles.content}>
@@ -50,9 +50,9 @@ const styles = StyleSheet.create({
   buttonUser: {
     width: 44,
     height: 44,
-    backgroundColor: 'rgba(255, 255, 255, .5)',
+    backgroundColor: "rgba(255, 255, 255, .5)",
     justifyContent: "center",
     alignItems: "center",
-    borderRadius: 44/2,
-  }
+    borderRadius: 44 / 2,
+  },
 });
